@@ -6,6 +6,8 @@ docker-compose --version
 
 # install for Arm architecture like Raspberry Pi, Box
 sudo apt-get install libffi6 libffi-dev
+sudo apt-get install python-dev
+sudo apt-get install python3-dev
 rm -rf /usr/local/bin/docker-compose 
 rm -rf /usr/bin/docker-compose
 pip3 uninstall docker-compose

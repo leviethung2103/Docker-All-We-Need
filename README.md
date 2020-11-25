@@ -374,8 +374,28 @@ $ docker-compose up --build
 $ xhost - local:docker
 ```
 
+## Docker Compose with GPUs
+Basically, after installing the nvidia-docker, we can run the container via `docker run`. However, it's a little tricky when using the `docker compose up`. 
 
+In order to use the `gpus` as well as `cuda` library, we need to specify the runtime argument inside the `docker-compose.yml`. 
 
+By doing that, we can easily run the gpus via `docker-compose` command. 
+
+Install the nvidia-docker2 is a must. 
+```
+sudo apt-get install -y nvidia-docker2
+```
+
+Configure the `/etc/docker/daemon.json` file.
+```
+"runtimes": {"nvidia": { "path": "/usr/bin/nvidia-container-runtime","runtimeArgs": [] } }
+```
+
+in your docker-compose YML you should add:
+runtime: nvidia
+
+Verified verison: Cuda 10.1 - Devel - Ubuntu 18 without cudnn
+> FROM nvidia/cuda:10.1-devel-ubuntu18.04 as nvidia_base
 
 ## Reference
 

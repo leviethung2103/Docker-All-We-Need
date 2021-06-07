@@ -20,10 +20,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo apt-cache madison docker-ce
 sudo apt-get install docker-ce="5:18.09.1~3-0~ubuntu-xenial" docker-ce-cli="5:18.09.1~3-0~ubuntu-xenial" containerd.io
 
-
-sudo apt-get install -y nvidia-container-toolkit
-
-
 # Verify that Docker engine is installed correctly 
 sudo docker run hello-world
 

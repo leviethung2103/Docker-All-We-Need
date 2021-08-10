@@ -4,6 +4,9 @@ sudo apt-get install -y gcc python3-dev libatlas-base-dev libv4l-dev libxvidcore
 sudo apt-get install gfortranlibgtk-3-dev 
 sudo apt-get install libncurses5-dev
 
+# Install code-server
+curl -fsSL https://code-server.dev/install.sh | sh
+
 # Install the NVTOP
 cd ~/Downloads
 git clone https://github.com/Syllo/nvtop.git

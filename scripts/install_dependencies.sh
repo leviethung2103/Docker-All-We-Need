@@ -12,6 +12,9 @@ chmod +x install_docker.sh
 # Install code-server
 curl -fsSL https://code-server.dev/install.sh | sh
 
+# download Dockers folder to setup cvat
+git clone https://github.com/leviethung2103/dockers-
+
 # Install the NVTOP
 cd ~/Downloads
 git clone https://github.com/Syllo/nvtop.git

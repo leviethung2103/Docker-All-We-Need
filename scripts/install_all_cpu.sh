@@ -1,3 +1,22 @@
+# update and upgrade
+apt-get update && apt-get upgrade
+
+# NGINX 
+apt-get install nginx
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt install python-certbot-nginx
+
+# Download the configure file
+wget 
+wget 
+cp nginx.conf /etc/nginx/nginx.conf 
+cp code.conf /etc/nginx/sites-enabled/code.conf
+
+# install for windows, linux 
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
 # Uninstall old versions 
 sudo apt-get remove docker docker-engine docker.io containerd runc -y 
 sudo apt-get update -y 
@@ -34,10 +53,6 @@ sudo usermod -aG docker $USER
 echo "Please log out and log back to re-evaluate group membership if it doesn't work"
 
 newgrp docker 
-docker run hello-world
+docker run hello-worldz
 
 
-# install for windows, linux 
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version

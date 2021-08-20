@@ -7,8 +7,8 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt install python-certbot-nginx
 
 # Download the configure file
-wget https://github.com/leviethung2103/Docker-All-We-Need/blob/master/nginx-conf/code.conf
-wget https://github.com/leviethung2103/Docker-All-We-Need/blob/master/nginx-conf/nginx.conf
+wget https://raw.githubusercontent.com/leviethung2103/Docker-All-We-Need/master/nginx-conf/code.conf
+wget https://raw.githubusercontent.com/leviethung2103/Docker-All-We-Need/master/nginx-conf/nginx.conf
 cp nginx.conf /etc/nginx/nginx.conf 
 cp code.conf /etc/nginx/sites-enabled/code.conf
 

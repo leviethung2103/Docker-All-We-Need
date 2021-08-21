@@ -6,6 +6,13 @@ apt-get install nginx
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt install python-certbot-nginx
 
+# RCONE
+cd /root/
+wget https://downloads.rclone.org/rclone-current-linux-amd64.zip
+unzip rclone-current-linux-amd64.zip
+\cp rclone-v*-linux-amd64/rclone /usr/sbin/
+rm -rf rclone-*
+
 # Download the configure file
 wget https://raw.githubusercontent.com/leviethung2103/Docker-All-We-Need/master/nginx-conf/code.conf
 wget https://raw.githubusercontent.com/leviethung2103/Docker-All-We-Need/master/nginx-conf/nginx.conf

@@ -20,3 +20,27 @@ Reference: https://www.digitalocean.com/community/tutorials/how-to-install-nginx
 ## Server Logs
 - /var/log/nginx/access.log: Every request to your web server is recorded in this log file unless Nginx is configured to do otherwise.
 - /var/log/nginx/error.log: Any Nginx errors will be recorded in this log.
+
+
+## SSL - Install the Certbot
+```bash
+$ apt-get update
+$ sudo apt-get install certbot
+$ apt-get install python3-certbot-nginx
+```
+
+verify the syntax of your configuration and restart NGINX
+```bash
+nginx -t && nginx -s reload
+```
+
+obtain the SSL certification
+```bash
+sudo certbot --nginx -d example.com -d www.example.com
+```
+
+Automatically Renew Let’s Encrypt Certificates
+```bash
+crontab -e
+0 12 * * * /usr/bin/certbot renew --quiet
+```

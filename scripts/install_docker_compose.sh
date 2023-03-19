@@ -1,8 +1,8 @@
-# install for windows, linux 
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# install for windows, linx - Docker-Compose version is updated from 1.26 to 1.29.1 - Used for Airflow
+# Ref: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
-
 
 # install for Arm architecture like Raspberry Pi, Box
 sudo apt-get install libffi6 libffi-dev

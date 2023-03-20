@@ -45,3 +45,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 echo "Done"
+
+sudo gpasswd -a $USER docker
+newgrp docker
+
+echo "Configured docker as host"

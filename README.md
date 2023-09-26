@@ -2,9 +2,6 @@
 
 ## 1. System Requirements
 
-
-## Update Docker
-
 - Ubuntu: 18.04
 
 ## 2. Install the docker

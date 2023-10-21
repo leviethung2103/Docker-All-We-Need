@@ -15,16 +15,33 @@ If you cannot install the nvidia-containre-toolkit, please follow this installat
 
 ## Install Docker for TV BOX - X9 Mini
 
+If you've encountered error related to connection time out.
+```bash
+sudo dpkg-reconfigure ca-certificates
+```
+
 Download the right script and install Docker on the Raspberry Pi environment. 
 
-Push this below installation script.
+
+
 ```bash
+sudo nano /etc/apt/sources.list.d/docker.list
+# change debian -> ubuntu
+deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian jammy stable
+
 curl -fsSL https://get.docker.com -o get-docker.sh
-```
-Run the script with the help of the below command:
-```bash
 sudo sh get-docker.sh
 ```
+
+Adding users to the Docker group:
+sudo usermod -aG docker [user_name]
+
+Log out and login again
+```bash
+docker version
+```
+
+
 
 ## Dependencies 
 ```bash

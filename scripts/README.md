@@ -13,6 +13,9 @@ bash install_all.sh
 If you cannot install the nvidia-containre-toolkit, please follow this installation guide
 > https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 
+## Install Docker for TV BOX - X9 Mini
+Download and run file `install-docker-box.sh`
+
 
 ## Dependencies 
 ```bash

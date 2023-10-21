@@ -41,7 +41,11 @@ Log out and login again
 docker version
 ```
 
+## Install Siyuan 
 
+```bash
+docker run -d --restart always -v /root/Downloads/siyuan/workspace:/siyuan/workspace -p 26053:6806 -u 0:1000 b3log/siyuan --workspace=/siyuan/workspace/ --accessAuthCode=xxx
+```
 
 ## Dependencies 
 ```bash

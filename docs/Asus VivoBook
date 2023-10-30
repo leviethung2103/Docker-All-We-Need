@@ -1,0 +1,16 @@
+## Setup Asus Vivobook
+
+Best suitable for Asus Vivobook
+
+Ubuntu 20.04
+Cuda 11.7
+NVIDIA Driver 535
+
+Remember to remove the all the pre-installed drivers before install the newest driver. 
+
+Configure Cuda
+
+```bash
+export PATH=${PATH}:/usr/local/cuda-11.7/bin
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-11.7/lib64
+```

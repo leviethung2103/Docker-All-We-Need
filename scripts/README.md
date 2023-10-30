@@ -1,6 +1,9 @@
 ### install_all.sh 
 Install the docker, docker-compose, docker-machine and nvidia-docker.
 
+### Best practice to install the Linux and Cuda
+Ubuntu version >=18.04, 20.04 or 22.04 
+
 
 ### Install TAO Toolkit
 Setup on vast.ai 

@@ -39,8 +39,34 @@ obtain the SSL certification
 sudo certbot --nginx -d example.com -d www.example.com
 ```
 
-Automatically Renew Let’s Encrypt Certificates
+Automatically Renew Let’s Encrypt Certificates | Renew every 20 day
 ```bash
 crontab -e
-0 12 * * * /usr/bin/certbot renew --quiet
+0 12 */20 * * /usr/bin/certbot renew --quiet
+```
+
+
+## Setup NextJS App
+```bash
+server {
+    listen 80;
+    server_name your_domain.com;  # Replace with your domain
+
+    location / {
+        proxy_pass http://localhost:3000;  # Replace with your Next.js app's URL
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+Install SSL
+```
+sudo nginx -t
+sudo systemctl reload nginx
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d your_domain.com
 ```
